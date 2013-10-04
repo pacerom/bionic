@@ -68,7 +68,6 @@
 #ifndef _PATH_HEQUIV
 # define	_PATH_HEQUIV	"/system/etc/hosts.equiv"
 #endif
-#define	_PATH_HOSTS	"/system/etc/hosts"
 #define	_PATH_NETWORKS	"/system/etc/networks"
 #define	_PATH_PROTOCOLS	"/system/etc/protocols"
 #define	_PATH_SERVICES	"/system/etc/services"
@@ -199,8 +198,10 @@ __BEGIN_DECLS
 #pragma GCC visibility push(default)
 
 /* BIONIC-BEGIN */
+#include <stdio.h>
 #define  h_errno   (*__get_h_errno())
 int*  __get_h_errno(void);
+FILE* __open_hosts(void);
 /* BIONIC-END */
 void endhostent(void);
 void endnetent(void);
