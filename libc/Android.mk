@@ -203,6 +203,7 @@ libc_common_src_files := \
 	bionic/utmp.c \
 	bionic/wcscoll.c \
 	netbsd/gethnamaddr.c \
+	netbsd/hostfile.c \
 	netbsd/inet/nsap_addr.c \
 	netbsd/resolv/__dn_comp.c \
 	netbsd/resolv/__res_close.c \
